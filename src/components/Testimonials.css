@@ -1,0 +1,104 @@
+/* Overall Section */
+.testimonials {
+  padding: 100px 80px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Section Heading */
+.testimonial-header .subtitle {
+  color: #a6adbf;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.testimonial-header .title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.testimonial-header .highlight {
+  color: #ff6d99;
+}
+
+.testimonial-header .description {
+  font-size: 1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+/* Video Testimonials Container */
+.video-testimonials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease both;
+}
+
+/* Individual Video Card */
+.video-card {
+  background-color: #a6adbf;
+  border-radius: 24px;
+  width: 320px;
+  height: 480px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Video Styling */
+.video-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+}
+
+/* Optional animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 60px 20px;
+  }
+
+  .testimonial-header .title {
+    font-size: 2rem;
+  }
+
+  .testimonial-header .description {
+    font-size: 0.95rem;
+  }
+
+  .video-card {
+    width: 100%;
+    max-width: 360px;
+    height: 420px;
+  }
+}

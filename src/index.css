@@ -1,0 +1,12 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, #root {
+  min-height: 100vh;
+}
+
+.page-content {
+  padding-top: 80px; /* Adjust based on your navbar height */
+}

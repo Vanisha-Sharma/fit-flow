@@ -1,0 +1,46 @@
+.blog-article {
+  padding: 4rem 2rem;
+  max-width: 850px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  gap: 10px;
+}
+
+.episode {
+  color: #f85e9f;
+  font-weight: 700;
+}
+
+.divider {
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.date {
+  color: #b0b0b0;
+  font-weight: 500;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.blog-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  color: #555;
+}

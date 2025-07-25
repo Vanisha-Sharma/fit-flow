@@ -1,0 +1,314 @@
+.testimonial-carousel {
+  width: 100%;
+  max-width: 1200px; /* Maximum width for the carousel */
+  margin: 0 auto; /* Center the carousel horizontally */
+  padding: 20px; /* Padding around the carousel */
+  position: relative; /* Needed for absolute positioning of buttons */
+  overflow: hidden; /* Hides parts of cards not in view during transitions */
+  font-family: "Inter", sans-serif; /* Ensures consistent font */
+}
+
+/* Container for the carousel track and navigation buttons */
+.carousel-container {
+  display: flex;
+  align-items: center; /* Vertically centers items */
+  position: relative; /* Needed for absolute positioning of buttons */
+}
+
+/* The inner track that slides to show different testimonials */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+  width: 100%; /* Occupies full width of its parent */
+}
+
+/* Styles for an individual testimonial card */
+.testimonial-card {
+  min-width: 100%; /* Each card takes up the full width of the visible area */
+  padding: 0 15px; /* Horizontal padding between cards and carousel edges */
+  box-sizing: border-box; /* Includes padding in the element's total width */
+  flex-shrink: 0; /* Prevents cards from shrinking */
+}
+
+/* Content wrapper for each card, styled to match the Framer reference */
+.card-content {
+  background-color: rgb(255, 255, 255); /* Pure white background */
+  border-radius: 24px; /* Rounded corners for the card */
+  /* Box shadows meticulously matched from the Framer reference */
+  box-shadow:
+    rgba(23, 62, 100, 0.03) 0px 7px 16px 0px,
+    rgba(23, 62, 100, 0.03) 0px 29px 29px 0px,
+    rgba(23, 62, 100, 0.02) 0px 65px 39px 0px;
+  padding: 30px; /* Internal padding for content */
+  min-height: 347px; /* Ensures a consistent height to prevent layout shifts */
+  display: flex;
+  flex-direction: column; /* Stacks content vertically */
+  justify-content: space-between; /* Distributes content vertically */
+}
+
+/* Container for the user's profile image */
+.user-image-container {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%; /* Makes the image circular */
+  overflow: hidden; /* Hides any part of the image outside the circle */
+  margin-bottom: 16px; /* Space below the image */
+}
+
+/* Styling for the user's profile image */
+.user-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Container for user's name and rating */
+.user-info {
+  display: flex;
+  justify-content: space-between; /* Puts name and rating on opposite ends */
+  align-items: center; /* Vertically aligns name and rating */
+  margin-bottom: 8px; /* Space below this section */
+}
+
+/* Styling for the user's name */
+.user-name {
+  margin: 0; /* Removes default margin */
+  font-size: 18px;
+  color: #111; /* Dark text color */
+  font-weight: 600; /* Semi-bold font weight */
+}
+
+/* Container for the star rating */
+.rating {
+  display: flex; /* Arranges stars in a row */
+}
+
+/* Styling for individual star icons */
+.star {
+  font-size: 16px;
+  margin-left: 4px; /* Space between stars */
+}
+
+/* Color for filled stars */
+.star.filled {
+  color: #000; /* Black color for filled stars */
+}
+
+/* Color for empty stars */
+.star.empty {
+  color: #ccc; /* Light grey color for empty stars */
+}
+
+/* Container for review date and platform */
+.review-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px; /* Space below this section */
+  font-size: 14px;
+}
+
+/* Styling for the review date */
+.review-date {
+  color: #666; /* Grey text color */
+  margin-right: 4px; /* Space between date and "on" text */
+}
+
+/* Container for the platform name */
+.review-platform {
+  display: flex;
+}
+
+/* Styling for the "on" text */
+.on-text {
+  color: #666; /* Grey text color */
+}
+
+/* Styling for the platform name (e.g., TrustPoint) */
+.platform-name {
+  color: #ff6d99; /* Pink accent color */
+  margin-left: 4px; /* Space between "on" and platform name */
+  font-weight: 600; /* Semi-bold font weight */
+}
+
+/* Container for the review title and content */
+.review-content {
+  flex-grow: 1; /* Allows this section to take up available vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers text vertically within its space */
+}
+
+/* Styling for the review title/headline */
+.review-title {
+  margin: 0 0 12px 0; /* Margin below the title */
+  font-size: 18px;
+  color: #111; /* Dark text color */
+  font-weight: 700; /* Bold font weight */
+}
+
+/* Styling for the main review text */
+.review-text {
+  margin: 0; /* Removes default margin */
+  font-size: 15px;
+  color: #666; /* Grey text color */
+  line-height: 1.6; /* Improves readability */
+}
+
+/* Styles for carousel navigation buttons */
+.carousel-button {
+  position: absolute; /* Positions buttons relative to .carousel-container */
+  top: 50%; /* Vertically centers the button */
+  transform: translateY(-50%); /* Adjusts for button's own height to perfectly center */
+  background: white;
+  border: none; /* Removes default button border */
+  border-radius: 50%; /* Makes buttons circular */
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer; /* Indicates interactivity */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  z-index: 10; /* Ensures buttons are above other content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover effect for carousel buttons */
+.carousel-button:hover {
+  background-color: #f0f0f0; /* Slightly darker background on hover */
+  transform: translateY(-50%) scale(1.05); /* Slightly scales up on hover */
+}
+
+/* Position for the "previous" button */
+.carousel-button.prev {
+  left: 10px; /* Positions 10px from the left edge */
+}
+
+/* Position for the "next" button */
+.carousel-button.next {
+  right: 10px; /* Positions 10px from the right edge */
+}
+
+/* Container for carousel indicator dots */
+.carousel-indicators {
+  display: flex;
+  justify-content: center; /* Centers the dots horizontally */
+  margin-top: 20px; /* Space above the dots */
+}
+
+/* Styling for individual indicator dots */
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* Makes dots circular */
+  background: #ccc; /* Default grey color for inactive dots */
+  margin: 0 5px; /* Space between dots */
+  border: none; /* Removes default button border */
+  cursor: pointer; /* Indicates interactivity */
+  padding: 0; /* Removes default button padding */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for active state */
+}
+
+/* Styling for the active indicator dot */
+.indicator.active {
+  background: #ff6d99; /* Pink color for the active dot */
+  transform: scale(1.2); /* Slightly larger when active */
+}
+
+/* Responsive adjustments for screens up to 768px wide (tablets) */
+@media (max-width: 768px) {
+  .testimonial-carousel {
+    padding: 10px; /* Reduce overall padding */
+  }
+
+  .card-content {
+    padding: 20px; /* Adjust internal card padding */
+    min-height: 300px; /* Slightly reduce min-height for smaller screens */
+  }
+
+  .user-image-container {
+    width: 50px; /* Smaller user image */
+    height: 50px;
+  }
+
+  .user-name {
+    font-size: 16px; /* Smaller font for name */
+  }
+
+  .star {
+    font-size: 14px; /* Smaller star size */
+  }
+
+  .review-meta {
+    font-size: 13px; /* Smaller font for meta info */
+  }
+
+  .review-title {
+    font-size: 16px; /* Smaller font for title */
+  }
+
+  .review-text {
+    font-size: 14px; /* Smaller font for review text */
+  }
+  
+  .carousel-button {
+    width: 35px; /* Smaller navigation buttons */
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .carousel-button.prev {
+    left: 5px; /* Adjust button position closer to edge */
+  }
+
+  .carousel-button.next {
+    right: 5px; /* Adjust button position closer to edge */
+  }
+}
+
+/* Responsive adjustments for screens up to 480px wide (mobile phones) */
+@media (max-width: 480px) {
+  .testimonial-carousel {
+    padding: 5px; /* Further reduce overall padding */
+  }
+
+  .card-content {
+    padding: 15px; /* Further adjust internal card padding */
+    min-height: 280px; /* Further reduce min-height */
+  }
+
+  .user-image-container {
+    width: 40px; /* Even smaller user image */
+    height: 40px;
+    margin-bottom: 10px; /* Adjust margin */
+  }
+
+  .user-name {
+    font-size: 15px; /* Smaller font for name */
+  }
+
+  .star {
+    font-size: 13px; /* Even smaller star size */
+  }
+
+  .review-meta {
+    font-size: 12px; /* Even smaller font for meta info */
+    margin-bottom: 10px; /* Adjust margin */
+  }
+
+  .review-title {
+    font-size: 15px; /* Smaller font for title */
+    margin-bottom: 8px; /* Adjust margin */
+  }
+
+  .review-text {
+    font-size: 13px; /* Even smaller font for review text */
+  }
+
+  .carousel-button {
+    width: 30px; /* Smallest navigation buttons */
+    height: 30px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,58 @@
+.trustpoint-badge {
+  display: inline-block;
+  text-decoration: none;
+  transform: translateX(-50%);
+  left: 50%;
+  position: relative;
+}
+
+.trustpoint-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.trustpoint-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 26'%3E%3Cpath d='M 26.621 9.589 L 16.456 9.589 L 13.316 0 L 10.165 9.589 L 0 9.579 L 8.233 15.51 L 5.083 25.089 L 13.316 19.167 L 21.539 25.089 L 18.399 15.51 Z' fill='rgb(0,182,122)'/%3E%3C/svg%3E");
+  background-size: cover;
+  margin-right: 8px;
+}
+
+.trustpoint-text {
+  font-size: 14px;
+  color: #111;
+  margin: 0;
+}
+
+.trustpoint-rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.rating-star {
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon fill='%23FFB400' points='12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9'/%3E%3C/svg%3E");
+  background-size: cover;
+}
+
+.trustpoint-score {
+  font-size: 13px;
+  color: #111;
+  margin: 0;
+  text-align: center;
+}

@@ -1,0 +1,99 @@
+.fitness-section {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: white;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  text-align: left;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Gradients */
+.pink {
+  background: linear-gradient(135deg, #ff5fad, #ff8e8e);
+}
+.purple {
+  background: linear-gradient(135deg, #ce65f4, #ff99cc);
+}
+.violet {
+  background: linear-gradient(135deg, #9c89f9, #c87ef0);
+}
+.blue {
+  background: linear-gradient(135deg, #57c6f9, #6f85f7);
+}
+
+/* Floating images */
+.floating-image {
+  position: absolute;
+  width: 120px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.top-img {
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right-img {
+  bottom: -20px;
+  right: -10px;
+  width: 140px;
+}
+
+.left-img {
+  bottom: -20px;
+  left: -10px;
+  width: 120px;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .floating-image {
+    width: 90px;
+  }
+
+  .top-img {
+    top: -20px;
+  }
+
+  .right-img,
+  .left-img {
+    bottom: -10px;
+  }
+}

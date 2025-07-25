@@ -1,0 +1,53 @@
+.notfound-container {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: #fff;
+}
+
+.notfound-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
+  font-weight: 900;
+  color: #000;
+  gap: 20px;
+}
+
+.notfound-code {
+  margin: 0;
+}
+
+.notfound-img {
+  width: 150px;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  will-change: transform;
+  pointer-events: none; /* so mouse doesn't conflict */
+}
+
+.notfound-message {
+  font-size: 16px;
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.notfound-btn {
+  display: inline-block;
+  background: #ff4fa4;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(255, 79, 164, 0.3);
+  transition: all 0.3s ease;
+}
+
+.notfound-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 79, 164, 0.4);
+}

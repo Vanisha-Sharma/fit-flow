@@ -1,0 +1,50 @@
+.formtips-section {
+  display: flex;
+  padding: 80px 60px;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.formtips-left {
+  font-size: 24px;
+  font-weight: bold;
+  flex: 1 1 200px;
+  min-width: 150px;
+}
+
+.formtips-right {
+  flex: 3 1 600px;
+}
+
+.formtips-right h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.formtips-right p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .formtips-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .formtips-right h1 {
+    font-size: 28px;
+  }
+
+  .formtips-left {
+    font-size: 20px;
+  }
+}

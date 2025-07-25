@@ -1,0 +1,37 @@
+.life-section {
+  padding: 80px 20px;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.life-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.life-heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.life-heading .highlight {
+  color: #ff4f8b;
+  display: inline-block;
+}
+
+.life-subtext {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.life-points p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}

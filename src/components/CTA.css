@@ -1,0 +1,30 @@
+.transformation-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom right, #f9fafb, #ffffff);
+  display: flex;
+  justify-content: center;
+}
+
+.transformation-container {
+  max-width: 800px;
+  text-align: left;
+}
+
+.transformation-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.highlight {
+  color: #ff5590;
+}
+
+.transformation-para {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}

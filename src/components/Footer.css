@@ -1,0 +1,156 @@
+.fitflow-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 40px;
+  background-color: #fff;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+.footer-left h2 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.footer-left h2 span {
+  color: #f36da2;
+}
+
+.subscribe-form {
+  margin: 20px 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid #eee;
+  background: #f9f9f9;
+  font-size: 16px;
+  min-width: 250px;
+}
+
+.subscribe-form button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(to bottom right, #ff6ec4, #f871a0);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.2);
+}
+
+.privacy-text {
+  font-size: 13px;
+  color: #555;
+  max-width: 500px;
+}
+
+.privacy-text a {
+  color: #f36da2;
+  text-decoration: none;
+}
+
+.contact-text {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.contact-text a {
+  color: #f36da2;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  background: #f36da2;
+  color: white;
+  padding: 12px;
+  border-radius: 999px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 15px rgba(243, 109, 162, 0.3);
+}
+
+.footer-right {
+  align-self: flex-end;
+  text-align: left;
+}
+
+.footer-right h4 {
+  color: #8e8e8e;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right li {
+  margin: 8px 0;
+}
+
+.footer-right a {
+  color: #f36da2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-right a span {
+  margin-left: 6px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #888;
+}
+
+.template-credit {
+  color: #f36da2;
+}
+
+.template-credit a {
+  color: #111;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .fitflow-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer-left, .footer-right {
+    width: 48%;
+  }
+
+  .footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+  }
+}
