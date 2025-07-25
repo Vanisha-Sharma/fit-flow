@@ -1,15 +1,18 @@
 .carousel-container {
   position: relative;
   width: 80%;
+  max-width: 900px;
+  height: 550px; /* updated: reduced height */
   margin: 3rem auto;
   border-radius: 2rem;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-image {
   width: 100%;
-  height: auto;
+  height: 100%; /* Fill the container height */
+  object-fit: cover; /* Keeps image from stretching */
   display: block;
 }
 

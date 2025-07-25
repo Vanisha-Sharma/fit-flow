@@ -20,6 +20,7 @@ import TrustPointBadge from './components/TrustPointBadge';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import ScrollToTop from './components/ScrollToTop';
 import CoachingPlan from './components/CoachingPlan';
+import Blog from './components/Blog';
 
 // Animation wrapper component
 const AnimatedPage = ({ children }) => {
@@ -35,6 +36,7 @@ const AnimatedPage = ({ children }) => {
   );
 };
 
+// Home Page Sections
 function HomePage() {
   const navigate = useNavigate();
 
@@ -61,6 +63,7 @@ function HomePage() {
   );
 }
 
+// Routing + Animation Wrapper
 const AppContent = () => {
   const location = useLocation();
 
@@ -118,6 +121,14 @@ const AppContent = () => {
             } 
           />
           <Route 
+            path="/blog/stronger-every-day-copy" 
+            element={
+              <AnimatedPage>
+                <Blog />
+              </AnimatedPage>
+            } 
+          />
+          <Route 
             path="*" 
             element={
               <AnimatedPage>
@@ -132,6 +143,7 @@ const AppContent = () => {
   );
 };
 
+// Main App Entry Point
 function App() {
   return (
     <Router>

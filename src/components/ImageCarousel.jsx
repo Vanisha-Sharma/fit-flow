@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './ImageCarousel.css';
-import slide1 from './assets/slide1.jpg';
-import slide2 from './assets/slide2.jpg';
-import slide3 from './assets/slide3.jpg';
 
-const slides = [slide1, slide2, slide3];
+const slides = [
+  '/assets/slide1.jpg',
+  '/assets/slide2.jpg',
+  '/assets/slide3.jpg'
+];
 
 const ImageCarousel = () => {
   const [current, setCurrent] = useState(0);
 
-  // Auto-slide effect
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 3000); // Change image every 3 seconds
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval);
   }, []);
 
   const nextSlide = () => {

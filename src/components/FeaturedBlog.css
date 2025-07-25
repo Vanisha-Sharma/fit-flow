@@ -1,6 +1,7 @@
 .featured-blog {
   display: block;
   position: relative;
+  width: 100%;
   height: 100vh;
   background-image: url("https://framerusercontent.com/images/s66q8qMof7Qdzw49YvAJyOtGj4.jpg");
   background-size: cover;
@@ -8,6 +9,12 @@
   text-decoration: none;
   color: white;
   overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.featured-blog:hover {
+  transform: scale(1.002); /* subtle hover zoom */
 }
 
 .blog-overlay {
@@ -16,7 +23,8 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 80px;
+  padding: 0 80px;
+  box-sizing: border-box;
 }
 
 .blog-content {
@@ -57,18 +65,36 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .blog-overlay {
-    padding-left: 20px;
-    align-items: flex-end;
-    padding-bottom: 60px;
-  }
-
+@media (max-width: 1024px) {
   .blog-title {
-    font-size: 32px;
+    font-size: 40px;
   }
 
   .blog-desc {
-    font-size: 16px;
+    font-size: 17px;
+  }
+
+  .blog-overlay {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-overlay {
+    padding: 0 20px 60px;
+    align-items: flex-end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+  }
+
+  .blog-title {
+    font-size: 28px;
+  }
+
+  .blog-desc {
+    font-size: 15px;
+  }
+
+  .read-more {
+    font-size: 14px;
   }
 }
