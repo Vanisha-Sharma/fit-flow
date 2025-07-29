@@ -1,0 +1,86 @@
+
+.articles-section {
+  padding: 4rem 2rem;
+  text-align: left;
+  background: #fff;
+}
+
+.articles-header {
+  text-align: center;
+  background: #fff;
+}
+
+.articles-subheading {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8c8c8c;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.articles-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+}
+
+.highlight {
+  color: #ff4f80;
+}
+
+.articles-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.article-card {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: scale(1.02);
+}
+
+.article-overlay {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.0));
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.article-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.article-desc {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.read-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff4f80;
+}

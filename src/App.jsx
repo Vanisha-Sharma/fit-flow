@@ -21,28 +21,24 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import ScrollToTop from './components/ScrollToTop';
 import CoachingPlan from './components/CoachingPlan';
 import Blog from './components/Blog';
+import CrushYourCore from './components/CrushYourCore'; // <-- ✅ Add this line
+import FuelYourGains from './components/FuelYourGains';
 
-// Animation wrapper component
-const AnimatedPage = ({ children }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-    >
-      {children}
-    </motion.div>
-  );
-};
+// Animation wrapper
+const AnimatedPage = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -20 }}
+    transition={{ duration: 0.5, ease: 'easeInOut' }}
+  >
+    {children}
+  </motion.div>
+);
 
-// Home Page Sections
 function HomePage() {
   const navigate = useNavigate();
-
-  const handleStartJourney = () => {
-    navigate('/get-started');
-  };
+  const handleStartJourney = () => navigate('/get-started');
 
   return (
     <>
@@ -63,79 +59,28 @@ function HomePage() {
   );
 }
 
-// Routing + Animation Wrapper
 const AppContent = () => {
   const location = useLocation();
 
   return (
     <>
       <Navbar />
-      <AnimatePresence mode='wait'>
+      <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route
-            path="/"
-            element={
-              <AnimatedPage>
-                <HomePage />
-              </AnimatedPage>
-            }
-          />
-          <Route 
-            path="/about" 
-            element={
-              <AnimatedPage>
-                <About />
-              </AnimatedPage>
-            } 
-          />
-          <Route 
-            path="/programs" 
-            element={
-              <AnimatedPage>
-                <TrainingPrograms />
-              </AnimatedPage>
-            } 
-          />
-          <Route 
-            path="/get-started" 
-            element={
-              <AnimatedPage>
-                <CoachingPlan />
-              </AnimatedPage>
-            } 
-          />
-          <Route 
-            path="/privacy-policy" 
-            element={
-              <AnimatedPage>
-                <PrivacyPolicy />
-              </AnimatedPage>
-            } 
-          />
-          <Route 
-            path="/contact" 
-            element={
-              <AnimatedPage>
-                <Footer />
-              </AnimatedPage>
-            } 
-          />
-          <Route 
-            path="/blog/stronger-every-day-copy" 
-            element={
-              <AnimatedPage>
-                <Blog />
-              </AnimatedPage>
-            } 
-          />
-          <Route 
-            path="*" 
-            element={
-              <AnimatedPage>
-                <NotFound />
-              </AnimatedPage>
-            } 
-          />
+          <Route path="/" element={<AnimatedPage><HomePage /></AnimatedPage>} />
+          <Route path="/about" element={<AnimatedPage><About /></AnimatedPage>} />
+          <Route path="/programs" element={<AnimatedPage><TrainingPrograms /></AnimatedPage>} />
+          <Route path="/get-started" element={<AnimatedPage><CoachingPlan /></AnimatedPage>} />
+          <Route path="/privacy-policy" element={<AnimatedPage><PrivacyPolicy /></AnimatedPage>} />
+          <Route path="/contact" element={<AnimatedPage><Footer /></AnimatedPage>} />
+          <Route path="/blog/stronger-every-day-copy" element={<AnimatedPage><Blog /></AnimatedPage>} />
+          
+          
+          {/* ✅ Add CrushYourCore route */}
+          <Route path="/blog/crush-your-core" element={<AnimatedPage><CrushYourCore /></AnimatedPage>} />
+          <Route path="/blog/fuel-your-gains" element={<AnimatedPage><FuelYourGains /></AnimatedPage>} />
+          
+          <Route path="*" element={<AnimatedPage><NotFound /></AnimatedPage>} />
         </Routes>
       </AnimatePresence>
       <Footer />
@@ -143,7 +88,6 @@ const AppContent = () => {
   );
 };
 
-// Main App Entry Point
 function App() {
   return (
     <Router>
