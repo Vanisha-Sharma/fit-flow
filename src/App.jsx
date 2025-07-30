@@ -74,9 +74,7 @@ const AppContent = () => {
           <Route path="/privacy-policy" element={<AnimatedPage><PrivacyPolicy /></AnimatedPage>} />
           <Route path="/contact" element={<AnimatedPage><Footer /></AnimatedPage>} />
           <Route path="/blog/stronger-every-day-copy" element={<AnimatedPage><Blog /></AnimatedPage>} />
-          
-          
-          {/* ✅ Add CrushYourCore route */}
+          <Route path="/blog/stronger-every-day" element={<AnimatedPage><Blog /></AnimatedPage>} />
           <Route path="/blog/crush-your-core" element={<AnimatedPage><CrushYourCore /></AnimatedPage>} />
           <Route path="/blog/fuel-your-gains" element={<AnimatedPage><FuelYourGains /></AnimatedPage>} />
           

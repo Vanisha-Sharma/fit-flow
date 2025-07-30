@@ -7,7 +7,7 @@ import {
   FaYoutube,
   FaPaperPlane,
 } from 'react-icons/fa6';
-import { Link } from 'react-router-dom'; // ✅ Import Link for internal routing
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -61,7 +61,7 @@ const Footer = () => {
           <li><Link to="/programs">Training Programs <span>↗</span></Link></li>
           <li><Link to="/get-started">Get Started <span>↗</span></Link></li>
           <li><Link to="/blog">Our Blog <span>↗</span></Link></li>
-          <li><Link to="/blog/article">Blog Article <span>↗</span></Link></li>
+          <li><Link to="/blog/stronger-every-day">Blog Article <span>↗</span></Link></li>
           <li><Link to="/privacy-policy">Privacy Policy <span>↗</span></Link></li>
           <li><Link to="/404">404 Page Not Found <span>↗</span></Link></li>
         </ul>

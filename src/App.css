@@ -16,3 +16,7 @@ section {
   max-width: 1200px;
   margin: auto;
 }
+
+html {
+  scroll-behavior: smooth;
+}
