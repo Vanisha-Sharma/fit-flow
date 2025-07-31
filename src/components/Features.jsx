@@ -1,9 +1,11 @@
 // src/components/Features.jsx
 import React from "react";
 import "./Features.css";
+import AOSWrapper from "./AOSWrapper";
 
 const Features = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <section className="features-section" id="features">
       <div className="features-header">
         <h5>How It Works</h5>
@@ -52,6 +54,7 @@ const Features = () => {
         <img src="/assets/water-bottle.png" alt="bottle" className="float-bottle" />
       </div>
     </section>
+    </AOSWrapper>
   );
 };
 

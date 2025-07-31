@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -21,10 +24,10 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import ScrollToTop from './components/ScrollToTop';
 import CoachingPlan from './components/CoachingPlan';
 import Blog from './components/Blog';
-import CrushYourCore from './components/CrushYourCore'; // <-- ✅ Add this line
+import CrushYourCore from './components/CrushYourCore';
 import FuelYourGains from './components/FuelYourGains';
 
-// Animation wrapper
+// Animate page transitions
 const AnimatedPage = ({ children }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
@@ -62,6 +65,20 @@ function HomePage() {
 const AppContent = () => {
   const location = useLocation();
 
+  // ✅ Initialize AOS on mount and refresh on route change
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+      easing: 'ease-in-out',
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.refresh(); // Refresh animations on every route change
+  }, [location]);
+
   return (
     <>
       <Navbar />
@@ -77,7 +94,6 @@ const AppContent = () => {
           <Route path="/blog/stronger-every-day" element={<AnimatedPage><Blog /></AnimatedPage>} />
           <Route path="/blog/crush-your-core" element={<AnimatedPage><CrushYourCore /></AnimatedPage>} />
           <Route path="/blog/fuel-your-gains" element={<AnimatedPage><FuelYourGains /></AnimatedPage>} />
-          
           <Route path="*" element={<AnimatedPage><NotFound /></AnimatedPage>} />
         </Routes>
       </AnimatePresence>

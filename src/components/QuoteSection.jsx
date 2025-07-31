@@ -1,9 +1,11 @@
-// src/components/QuoteSection.jsx
+
 import React from "react";
 import "./QuoteSection.css";
+import AOSWrapper from "./AOSWrapper";
 
 const QuoteSection = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <div className="quote-container">
       <section className="quote-spacer" />
       <div className="quote-content">
@@ -28,6 +30,7 @@ const QuoteSection = () => {
       </div>
       <section className="quote-spacer" />
     </div>
+    </AOSWrapper>
   );
 };
 

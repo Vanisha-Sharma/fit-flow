@@ -1,8 +1,10 @@
 import React from 'react';
 import './TrainingPrograms.css';
+import AOSWrapper from './AOSWrapper';
 
 const TrainingPrograms = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <div className="training-programs-container">
       <div className="header">
         <p className="subtitle">TRAINING PROGRAMS</p>
@@ -68,6 +70,7 @@ const TrainingPrograms = () => {
         <img src="/assets/pink-dumbbells.png" alt="Pink Dumbbells" className="floating-image" />
       </section>
     </div>
+    </AOSWrapper>
   );
 };
 

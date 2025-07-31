@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import AOSWrapper from './AOSWrapper';
 import './FAQ.css';
 
 const faqData = [
@@ -56,6 +57,7 @@ const FAQ = () => {
   };
 
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <section className="faq-section">
       {/* Left side image */}
       <div className="faq-image-container">
@@ -92,6 +94,7 @@ const FAQ = () => {
         </div>
       </div>
     </section>
+    </AOSWrapper>
   );
 };
 

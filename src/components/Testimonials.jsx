@@ -1,8 +1,10 @@
 import React from 'react';
 import './Testimonials.css';
+import AOSWrapper from './AOSWrapper';
 
 const Testimonials = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <section className="testimonials">
       <div className="testimonial-header">
         <h5 className="subtitle">Testimonials</h5>
@@ -15,9 +17,6 @@ const Testimonials = () => {
         </p>
       </div>
 
-      {/* Existing text testimonials or image slider could go here */}
-
-      {/* ---- VIDEO TESTIMONIAL SECTION ---- */}
       <div className="video-testimonials">
         <div className="video-card">
           <div className="video-wrapper">
@@ -59,6 +58,7 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
+    </AOSWrapper>
   );
 };
 

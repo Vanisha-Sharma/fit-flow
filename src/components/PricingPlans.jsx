@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './PricingPlans.css';
+import AOSWrapper from './AOSWrapper';
 
 const PricingPlans = () => {
   const [yearly, setYearly] = useState(false);
@@ -9,6 +10,7 @@ const PricingPlans = () => {
   const formatPrice = (monthly) => yearly ? Math.round(monthly * 12 * 0.8) : monthly;
 
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <section className="pricing-section">
       <h1 className="pricing-title">
         <span>Choose the Plan That <br /></span>
@@ -75,6 +77,7 @@ const PricingPlans = () => {
         </div>
       </div>
     </section>
+    </AOSWrapper>
   );
 };
 

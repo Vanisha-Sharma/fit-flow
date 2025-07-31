@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Stats.css';
+import AOSWrapper from './AOSWrapper';
 
 const formatNumber = (num) => {
   if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M+';
@@ -29,10 +30,12 @@ const StatsCounter = ({ target, label, start }) => {
   }, [start, target]);
 
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <div className="stat-box">
       <h2 className="stat-number">{formatNumber(Math.floor(count))}</h2>
       <p className="stat-label">{label}</p>
     </div>
+    </AOSWrapper>
   );
 };
 
@@ -56,11 +59,13 @@ const Stats = () => {
   }, []);
 
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <section className="stats-section">
       <StatsCounter target={420} label="ACTIVE MEMBERS" start={start} />
       <StatsCounter target={3200} label="SESSIONS COMPLETED" start={start} />
       <StatsCounter target={27000000} label="CALORIES BURNT" start={start} />
     </section>
+    </AOSWrapper>
   );
 };
 

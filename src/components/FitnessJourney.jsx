@@ -1,8 +1,10 @@
 import React from 'react';
 import './FitnessJourney.css';
+import AOSWrapper from './AOSWrapper';
 
 const FitnessJourney = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <div className="fitness-section">
       <div className="grid-container">
         {/* Card 1 */}
@@ -33,6 +35,7 @@ const FitnessJourney = () => {
         </div>
       </div>
     </div>
+    </AOSWrapper>
   );
 };
 

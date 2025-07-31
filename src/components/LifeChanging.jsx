@@ -1,8 +1,10 @@
 import React from "react";
 import "./LifeChanging.css";
+import AOSWrapper from "./AOSWrapper";
 
 const LifeChanging = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <section className="life-section">
       <div className="life-container">
         <h2 className="life-heading">
@@ -37,6 +39,7 @@ const LifeChanging = () => {
         </div>
       </div>
     </section>
+    </AOSWrapper>
   );
 };
 

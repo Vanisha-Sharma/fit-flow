@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AOSWrapper from './AOSWrapper';
 import './CoachingPlan.css';
 
 const sliderImages = [
@@ -30,6 +31,7 @@ const CoachingPlan = () => {
   };
 
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <div className="coaching-plan-container">
       <div className="coaching-plan-content">
         {/* Left Section - Form */}
@@ -89,6 +91,7 @@ const CoachingPlan = () => {
         </div>
       </div>
     </div>
+    </AOSWrapper>
   );
 };
 

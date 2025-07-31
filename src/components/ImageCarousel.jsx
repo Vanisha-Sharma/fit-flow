@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './ImageCarousel.css';
+import AOSWrapper from './AOSWrapper';
 
 const slides = [
   '/assets/slide1.jpg',
@@ -27,6 +28,7 @@ const ImageCarousel = () => {
   };
 
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <div className="carousel-container">
       <img src={slides[current]} alt={`slide-${current}`} className="carousel-image" />
       <button className="carousel-btn left" onClick={prevSlide}>&lt;</button>
@@ -41,6 +43,7 @@ const ImageCarousel = () => {
         ))}
       </div>
     </div>
+    </AOSWrapper>
   );
 };
 

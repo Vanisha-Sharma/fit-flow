@@ -1,8 +1,10 @@
 import React from "react";
 import "./FeaturedBlog.css";
+import AOSWrapper from "./AOSWrapper";
 
 const FeaturedBlog = () => {
   return (
+    <AOSWrapper animation="zoom-out" delay={100}>
     <a href="/blog/stronger-every-day-copy" className="featured-blog">
       <div className="blog-overlay">
         <div className="blog-content">
@@ -17,6 +19,7 @@ const FeaturedBlog = () => {
         </div>
       </div>
     </a>
+    </AOSWrapper>
   );
 };
 

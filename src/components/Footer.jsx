@@ -8,9 +8,11 @@ import {
   FaPaperPlane,
 } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import AOSWrapper from './AOSWrapper';
 
 const Footer = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <footer className="fitflow-footer">
       <div className="footer-left">
         <h2>
@@ -79,6 +81,7 @@ const Footer = () => {
         <p>Copyright 2025 FitFlow. All rights reserved.</p>
       </div>
     </footer>
+    </AOSWrapper>
   );
 };
 

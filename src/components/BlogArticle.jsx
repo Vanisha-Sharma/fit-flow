@@ -3,6 +3,7 @@ import './BlogArticle.css';
 
 const BlogArticle = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <section className="blog-article">
       <div className="blog-meta">
         <span className="episode">S01-E05</span>
@@ -30,6 +31,7 @@ const BlogArticle = () => {
         motivation is low.
       </p>
     </section>
+    </AOSWrapper>
   );
 };
 

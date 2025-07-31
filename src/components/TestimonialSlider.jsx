@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./TestimonialSlider.css";
+import AOSWrapper from "./AOSWrapper";
 
 const images = [
   "https://framerusercontent.com/images/zOwf7BZOj8wuFl3sQN2sWMDSvRU.jpg",
@@ -19,6 +20,7 @@ const TestimonialSlider = () => {
   };
 
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <section className="testimonial-section">
       <div className="testimonial-container">
         <div className="testimonial-text">
@@ -64,6 +66,7 @@ const TestimonialSlider = () => {
         </div>
       </div>
     </section>
+    </AOSWrapper>
   );
 };
 

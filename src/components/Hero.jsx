@@ -1,8 +1,10 @@
 import React from 'react';
 import './Hero.css';
+import AOSWrapper from './AOSWrapper';
 
 export default function Hero({ onStartJourney }) {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <section className="hero">
       <div className="hero-overlay">
         <div className="hero-left">
@@ -28,5 +30,6 @@ export default function Hero({ onStartJourney }) {
         </div>
       </div>
     </section>
+    </AOSWrapper>
   );
 }

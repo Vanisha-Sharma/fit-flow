@@ -1,8 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import "./PrivacyPolicy.css";
 import { FaCheckCircle } from "react-icons/fa";
+import AOSWrapper from "./AOSWrapper";
 
 const PinkCheckIcon = () => (
   <svg
@@ -20,8 +19,8 @@ const PinkCheckIcon = () => (
 
 const PrivacyPolicy = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <>
-      <Navbar />
 
       <div className="privacy-container">
         <h1 className="privacy-title">Privacy Policy</h1>
@@ -87,6 +86,7 @@ const PrivacyPolicy = () => {
         </footer>
       </div>
     </>
+    </AOSWrapper>
   );
 };
 

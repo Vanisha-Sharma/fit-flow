@@ -1,8 +1,10 @@
 import React from 'react';
 import './FormTipsSection.css';
+import AOSWrapper from './AOSWrapper';
 
 const FormTipsSection = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <>
       <section className="formtips-section">
         <div className="formtips-right">
@@ -27,6 +29,7 @@ const FormTipsSection = () => {
         </div>
       </section>
     </>
+    </AOSWrapper>
   );
 };
 

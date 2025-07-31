@@ -5,10 +5,13 @@ import FYGSection from "./FYGSection";
 import FYGImage from "./FYGImage";
 import FYGArticle from "./FYGArticle";
 import "./Blog.css";
+import AOSWrapper from "./AOSWrapper";
 
 const FuelYourGains = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <>
+    <AOSWrapper animation="zoom-out" delay={100}>
       <a href="/blog/crush-your-core" className="featured-blog">
         <div className="blog-overlay">
           <div className="blog-content">
@@ -23,6 +26,7 @@ const FuelYourGains = () => {
           </div>
         </div>
       </a>
+      </AOSWrapper>
 
       <FYGSection />
       <FYGImage />
@@ -77,6 +81,7 @@ const FuelYourGains = () => {
         </div>
       </section>
     </>
+    </AOSWrapper>
   );
 };
 

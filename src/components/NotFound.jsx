@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import "./NotFound.css";
-import Navbar from "./Navbar";
+import AOSWrapper from "./AOSWrapper";
 
 const NotFound = () => {
   const imgRef = useRef(null);
@@ -30,38 +30,38 @@ const NotFound = () => {
   };
 
   return (
-    <>
-      <Navbar />
-      <div className="notfound-container">
-        <div className="notfound-hero">
-  <h1 className="notfound-code">4</h1>
+    <AOSWrapper animation="fade-up" delay={100}>
+      <>
+        <div className="notfound-container">
+          <div className="notfound-hero">
+            <h1 className="notfound-code">4</h1>
 
-  <motion.div
-    ref={imgRef}
-    onMouseMove={handleMouseMove}
-    onMouseLeave={handleMouseLeave}
-    style={{ x: springX, y: springY }}
-    className="notfound-kettle-wrapper"
-  >
-    <img
-      src="/assets/kettlebell.png"
-      alt="Kettlebell"
-      className="notfound-img"
-    />
-  </motion.div>
+            <motion.div
+              ref={imgRef}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              style={{ x: springX, y: springY }}
+              className="notfound-kettle-wrapper"
+            >
+              <img
+                src="/assets/kettlebell.png"
+                alt="Kettlebell"
+                className="notfound-img"
+              />
+            </motion.div>
 
-  <h1 className="notfound-code">4</h1>
-</div>
+            <h1 className="notfound-code">4</h1>
+          </div>
 
-
-        <p className="notfound-message">
-          The page you are looking for could not be found.
-        </p>
-        <Link to="/" className="notfound-btn">
-          Back to Homepage
-        </Link>
-      </div>
-    </>
+          <p className="notfound-message">
+            The page you are looking for could not be found.
+          </p>
+          <Link to="/" className="notfound-btn">
+            Back to Homepage
+          </Link>
+        </div>
+      </>
+    </AOSWrapper>
   );
 };
 

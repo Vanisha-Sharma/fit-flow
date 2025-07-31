@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './TestimonialCarousel.css'; // Import the CSS file
+import './TestimonialCarousel.css';
+import AOSWrapper from './AOSWrapper';
 
 const TestimonialCarousel = () => {
-  // Array of testimonial data
   const testimonials = [
     {
       id: 1,
@@ -91,12 +91,7 @@ const TestimonialCarousel = () => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
-  /**
-   * Handles the touch end event, determining if a swipe occurred and
-   * navigating the carousel accordingly.
-   */
   const handleTouchEnd = () => {
-    // If touch start or end coordinates are not recorded, exit
     if (!touchStart || !touchEnd) return;
 
     const distance = touchStart - touchEnd; // Calculate the horizontal distance swiped
@@ -109,25 +104,16 @@ const TestimonialCarousel = () => {
       prevSlide(); // Move to the previous slide
     }
 
-    // Reset touch coordinates after processing the swipe
     setTouchStart(null);
     setTouchEnd(null);
   };
 
-  /**
-   * Advances the carousel to the next slide. Loops back to the beginning
-   * if currently at the last slide.
-   */
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  /**
-   * Moves the carousel to the previous slide. Loops to the end
-   * if currently at the first slide.
-   */
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
@@ -139,12 +125,10 @@ const TestimonialCarousel = () => {
     // Set up an interval to automatically advance slides every 5 seconds
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 5000)
 
-    // Clean-up function: clear the interval when the component unmounts
-    // or when currentIndex changes (to reset the timer for the new slide)
     return () => clearInterval(interval);
-  }, [currentIndex]); // Dependency array: re-run effect when currentIndex changes
+  }, [currentIndex]); 
 
   /**
    * Functional component to render star ratings.
@@ -168,6 +152,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <div className="testimonial-carousel">
       <div className="carousel-container">
         {/* Previous slide navigation button */}
@@ -239,6 +224,7 @@ const TestimonialCarousel = () => {
         ))}
       </div>
     </div>
+    </AOSWrapper>
   );
 };
 

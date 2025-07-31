@@ -4,10 +4,12 @@ import FeaturedBlog from "./FeaturedBlog";
 import FormTipsSection from "./FormTipsSection";
 import ImageCarousel from "./ImageCarousel";
 import BlogArticle from "./BlogArticle";
+import AOSWrapper from "./AOSWrapper";
 import "./Blog.css";
 
 const Blog = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <div className="blog-container">
       <FeaturedBlog />
       <BlogArticle />
@@ -46,6 +48,7 @@ const Blog = () => {
         </div>
       </section>
     </div>
+    </AOSWrapper>
   );
 };
 

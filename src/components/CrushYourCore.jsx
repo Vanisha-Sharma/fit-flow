@@ -8,8 +8,10 @@ import "./Blog.css";
 
 const CrushYourCore = () => {
   return (
+    <AOSWrapper animation="fade-up" delay={100}>
     <>
       <a href="/blog/crush-your-core" className="featured-blog">
+      <AOSWrapper animation="zoom-out" delay={100}>
         <div className="blog-overlay">
           <div className="blog-content">
             <p className="blog-label">S01-E04</p>
@@ -22,6 +24,7 @@ const CrushYourCore = () => {
             <span className="read-more">Read Article →</span>
           </div>
         </div>
+        </AOSWrapper>
       </a>
 
       <CYCSection />
@@ -77,6 +80,7 @@ const CrushYourCore = () => {
         </div>
       </section>
     </>
+    </AOSWrapper>
   );
 };
 
